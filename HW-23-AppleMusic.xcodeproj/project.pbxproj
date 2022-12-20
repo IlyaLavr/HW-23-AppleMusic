@@ -59,14 +59,10 @@
 		094EBF7E29520CB70053EE3E /* HW-23-AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				094EBF9529520F160053EE3E /* MainScreen */,
 				094EBF7F29520CB70053EE3E /* HW_23_AppleMusicApp.swift */,
-				094EBF8129520CB70053EE3E /* ContentView.swift */,
 				094EBF8329520CBB0053EE3E /* Assets.xcassets */,
 				094EBF8529520CBB0053EE3E /* Preview Content */,
-				094EBF8D29520E510053EE3E /* LibraryView.swift */,
-				094EBF8F29520E860053EE3E /* MediatekaView.swift */,
-				094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */,
-				094EBF9329520EEC0053EE3E /* MusicLabelView.swift */,
 			);
 			path = "HW-23-AppleMusic";
 			sourceTree = "<group>";
@@ -77,6 +73,18 @@
 				094EBF8629520CBB0053EE3E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		094EBF9529520F160053EE3E /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				094EBF8129520CB70053EE3E /* ContentView.swift */,
+				094EBF8D29520E510053EE3E /* LibraryView.swift */,
+				094EBF8F29520E860053EE3E /* MediatekaView.swift */,
+				094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */,
+				094EBF9329520EEC0053EE3E /* MusicLabelView.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
