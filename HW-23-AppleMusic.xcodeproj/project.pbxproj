@@ -19,6 +19,9 @@
 		094EBF9A295210520053EE3E /* RadioBigSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF99295210520053EE3E /* RadioBigSections.swift */; };
 		094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF9B295210A00053EE3E /* RadioSmallSections.swift */; };
 		094EBF9E295210D90053EE3E /* RadioMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF9D295210D90053EE3E /* RadioMainScreen.swift */; };
+		094EBFA12952115F0053EE3E /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA02952115F0053EE3E /* SearchModel.swift */; };
+		094EBFA32952118D0053EE3E /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA22952118D0053EE3E /* SearchScreen.swift */; };
+		094EBFA5295211BE0053EE3E /* SearchMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA4295211BE0053EE3E /* SearchMainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		094EBF99295210520053EE3E /* RadioBigSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioBigSections.swift; sourceTree = "<group>"; };
 		094EBF9B295210A00053EE3E /* RadioSmallSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSmallSections.swift; sourceTree = "<group>"; };
 		094EBF9D295210D90053EE3E /* RadioMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioMainScreen.swift; sourceTree = "<group>"; };
+		094EBFA02952115F0053EE3E /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		094EBFA22952118D0053EE3E /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		094EBFA4295211BE0053EE3E /* SearchMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 		094EBF7E29520CB70053EE3E /* HW-23-AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				094EBF9F295211460053EE3E /* SearchScreen */,
 				094EBF96295210160053EE3E /* RadioScreen */,
 				094EBF9529520F160053EE3E /* MainScreen */,
 				094EBF7F29520CB70053EE3E /* HW_23_AppleMusicApp.swift */,
@@ -105,6 +112,16 @@
 				094EBF9D295210D90053EE3E /* RadioMainScreen.swift */,
 			);
 			path = RadioScreen;
+			sourceTree = "<group>";
+		};
+		094EBF9F295211460053EE3E /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				094EBFA02952115F0053EE3E /* SearchModel.swift */,
+				094EBFA22952118D0053EE3E /* SearchScreen.swift */,
+				094EBFA4295211BE0053EE3E /* SearchMainScreen.swift */,
+			);
+			path = SearchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,13 +197,16 @@
 				094EBF9229520EBF0053EE3E /* MusicPlayerView.swift in Sources */,
 				094EBF9429520EEC0053EE3E /* MusicLabelView.swift in Sources */,
 				094EBF9E295210D90053EE3E /* RadioMainScreen.swift in Sources */,
+				094EBFA5295211BE0053EE3E /* SearchMainScreen.swift in Sources */,
 				094EBF9A295210520053EE3E /* RadioBigSections.swift in Sources */,
 				094EBF8229520CB70053EE3E /* ContentView.swift in Sources */,
 				094EBF98295210300053EE3E /* RadioModel.swift in Sources */,
+				094EBFA12952115F0053EE3E /* SearchModel.swift in Sources */,
 				094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */,
 				094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
 				094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */,
+				094EBFA32952118D0053EE3E /* SearchScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
