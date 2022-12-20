@@ -12,6 +12,7 @@
 		094EBF8429520CBB0053EE3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EBF8329520CBB0053EE3E /* Assets.xcassets */; };
 		094EBF8729520CBB0053EE3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EBF8629520CBB0053EE3E /* Preview Assets.xcassets */; };
 		094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF8D29520E510053EE3E /* LibraryView.swift */; };
+		094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF8F29520E860053EE3E /* MediatekaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		094EBF8329520CBB0053EE3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		094EBF8629520CBB0053EE3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		094EBF8D29520E510053EE3E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		094EBF8F29520E860053EE3E /* MediatekaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatekaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				094EBF8329520CBB0053EE3E /* Assets.xcassets */,
 				094EBF8529520CBB0053EE3E /* Preview Content */,
 				094EBF8D29520E510053EE3E /* LibraryView.swift */,
+				094EBF8F29520E860053EE3E /* MediatekaView.swift */,
 			);
 			path = "HW-23-AppleMusic";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				094EBF8229520CB70053EE3E /* ContentView.swift in Sources */,
 				094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */,
+				094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */,
 				094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
