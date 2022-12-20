@@ -22,6 +22,7 @@
 		094EBFA12952115F0053EE3E /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA02952115F0053EE3E /* SearchModel.swift */; };
 		094EBFA32952118D0053EE3E /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA22952118D0053EE3E /* SearchScreen.swift */; };
 		094EBFA5295211BE0053EE3E /* SearchMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA4295211BE0053EE3E /* SearchMainScreen.swift */; };
+		094EBFA8295212510053EE3E /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA7295212510053EE3E /* ListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		094EBFA02952115F0053EE3E /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		094EBFA22952118D0053EE3E /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		094EBFA4295211BE0053EE3E /* SearchMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainScreen.swift; sourceTree = "<group>"; };
+		094EBFA7295212510053EE3E /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		094EBF7E29520CB70053EE3E /* HW-23-AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				094EBFA6295212420053EE3E /* ListScreen */,
 				094EBF9F295211460053EE3E /* SearchScreen */,
 				094EBF96295210160053EE3E /* RadioScreen */,
 				094EBF9529520F160053EE3E /* MainScreen */,
@@ -122,6 +125,14 @@
 				094EBFA4295211BE0053EE3E /* SearchMainScreen.swift */,
 			);
 			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		094EBFA6295212420053EE3E /* ListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				094EBFA7295212510053EE3E /* ListModel.swift */,
+			);
+			path = ListScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */,
 				094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
+				094EBFA8295212510053EE3E /* ListModel.swift in Sources */,
 				094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */,
 				094EBFA32952118D0053EE3E /* SearchScreen.swift in Sources */,
 			);
