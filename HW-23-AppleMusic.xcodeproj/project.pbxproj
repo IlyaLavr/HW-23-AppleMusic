@@ -14,6 +14,7 @@
 		094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF8D29520E510053EE3E /* LibraryView.swift */; };
 		094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF8F29520E860053EE3E /* MediatekaView.swift */; };
 		094EBF9229520EBF0053EE3E /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */; };
+		094EBF9429520EEC0053EE3E /* MusicLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF9329520EEC0053EE3E /* MusicLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		094EBF8D29520E510053EE3E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		094EBF8F29520E860053EE3E /* MediatekaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatekaView.swift; sourceTree = "<group>"; };
 		094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		094EBF9329520EEC0053EE3E /* MusicLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				094EBF8D29520E510053EE3E /* LibraryView.swift */,
 				094EBF8F29520E860053EE3E /* MediatekaView.swift */,
 				094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */,
+				094EBF9329520EEC0053EE3E /* MusicLabelView.swift */,
 			);
 			path = "HW-23-AppleMusic";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				094EBF9229520EBF0053EE3E /* MusicPlayerView.swift in Sources */,
+				094EBF9429520EEC0053EE3E /* MusicLabelView.swift in Sources */,
 				094EBF8229520CB70053EE3E /* ContentView.swift in Sources */,
 				094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */,
 				094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */,
