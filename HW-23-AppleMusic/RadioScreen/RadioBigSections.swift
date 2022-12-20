@@ -20,7 +20,7 @@ struct RadioBigSections: View {
             LazyHGrid(rows: columns) {
                 ForEach(models, id: \.name) { row in
                     VStack(alignment: .leading){
-                        Text(row.title)
+                        Text(row.title ?? "")
                             .foregroundColor(.gray)
                         Text(row.name)
                             .bold()

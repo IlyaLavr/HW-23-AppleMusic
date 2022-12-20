@@ -23,6 +23,6 @@ extension SearchScreenModel {
         SearchScreenModel(name: "Чарты", image: "9"),
         SearchScreenModel(name: "Сон", image: "10"),
         SearchScreenModel(name: "Хиты", image: "11"),
-        SearchScreenModel(name: "2010-е", image: "12")
+        SearchScreenModel(name: "2010-е", image: "2010")
     ]
 }
