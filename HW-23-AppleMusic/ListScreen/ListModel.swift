@@ -13,7 +13,7 @@ struct ListModel: Hashable {
 }
 
 extension ListModel {
-    static var listInfo: [ListModel] = [ListModel(icon: "music.note.list", name: "Альбомы"),
+    static var listCategory: [ListModel] = [ListModel(icon: "music.note.list", name: "Альбомы"),
                                         ListModel(icon: "music.mic", name: "Артисты"),
                                         ListModel(icon: "square.stack", name: "Плейлисты"),
                                         ListModel(icon: "music.note", name: "Песни"),
