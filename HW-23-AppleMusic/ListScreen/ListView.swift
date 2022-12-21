@@ -14,23 +14,22 @@ struct ListView: View {
     var body: some View {
         VStack {
                 List {
-                    ForEach(ListModel.listInfo, id:\.self) {
+                    ForEach(ListModel.listCategory, id:\.self) {
                         ListCell(model: $0)
                             .listRowSeparator(.visible)
-                        
                     }
                     .onMove(perform: move)
                 }
-                .environment(\.editMode, $editMode)
+//                .environment(\.editMode, $editMode)
                 .listStyle(.grouped)
-                .padding(.leading, -40)
+                .padding(.leading, 0)
                 
             MusicPlayerView()
         }
     }
     
     private func move(from source: IndexSet, to destination: Int) {
-        ListModel.listInfo.move(fromOffsets: source, toOffset: destination)
+        ListModel.listCategory.move(fromOffsets: source, toOffset: destination)
     }
 }
 

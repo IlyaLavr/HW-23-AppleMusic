@@ -17,14 +17,16 @@ struct ListCell: View {
             ZStack {
                 Button(action: { toggle() },
                        label: {
-                    Image(systemName: "circle")
-                    .foregroundColor(.gray)})
-                if isShowed {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.pink)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                }
+                    if isShowed {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(.red)
+                            .background(Color.white)
+                            .cornerRadius(20)
+                    } else {
+                        Image(systemName: "circle")
+                        .foregroundColor(.gray)
+                    }
+                })
             }
             Image(systemName: model.icon)
                 .foregroundColor(.pink)
@@ -32,14 +34,14 @@ struct ListCell: View {
         }
     }
     
-     func toggle() {
+    func toggle() {
         isShowed.toggle()
     }
 }
 
 struct ListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ListCell(model: ListModel.listInfo.first ?? ListModel(icon: "none", name: "none"))
+        ListCell(model: ListModel.listCategory.first ?? ListModel(icon: "none", name: "none"))
     }
 }
 

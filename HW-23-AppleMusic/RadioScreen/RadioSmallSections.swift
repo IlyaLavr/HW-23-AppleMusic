@@ -10,7 +10,8 @@ import SwiftUI
 struct RadioSmallSections: View {
     
     var models = RadioScreenModel.smallSectionModels
-    
+    var recentModels = RadioScreenModel.recentSectionModels
+    var popularModels = RadioScreenModel.poularStantionsSectionModels
     var columns = [
         GridItem(.fixed(280))
     ]
@@ -51,7 +52,7 @@ struct RadioSmallSections: View {
             ScrollView(.horizontal, showsIndicators: false, content: {
                 
                 HStack {
-                    ForEach(models, id: \.name) { model in
+                    ForEach(recentModels, id: \.name) { model in
                         VStack(alignment: .leading) {
                             Image(model.image)
                                 .frame(width: 200, height: 150)
@@ -78,7 +79,7 @@ struct RadioSmallSections: View {
             }
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack {
-                    ForEach(models, id: \.name) { model in
+                    ForEach(popularModels, id: \.name) { model in
                         VStack(alignment: .leading) {
                             Image(model.image)
                                 .frame(width: 200, height: 150)

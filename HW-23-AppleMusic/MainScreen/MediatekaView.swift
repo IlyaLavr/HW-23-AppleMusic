@@ -21,7 +21,7 @@ struct MediatekaView: View {
                 } else {
                     ZStack {
                         ListView()
-                            .environment(\.editMode, $editMode)
+//                            .environment(\.editMode, $editMode)
                             .frame(alignment: .top)
                             .padding(.top, -280)
                     }
