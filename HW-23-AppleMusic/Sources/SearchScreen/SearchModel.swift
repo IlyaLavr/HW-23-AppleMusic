@@ -8,8 +8,8 @@
 import Foundation
 
 struct SearchScreenModel {
-   var name: String
-   var image: String
+    var name: String
+    var image: String
 }
 
 extension SearchScreenModel {

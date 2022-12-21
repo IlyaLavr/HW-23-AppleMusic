@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09472CC6295381720047FB7C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09472CC5295381720047FB7C /* Strings.swift */; };
 		094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF7F29520CB70053EE3E /* HW_23_AppleMusicApp.swift */; };
 		094EBF8229520CB70053EE3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBF8129520CB70053EE3E /* ContentView.swift */; };
 		094EBF8429520CBB0053EE3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094EBF8329520CBB0053EE3E /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09472CC5295381720047FB7C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		094EBF7C29520CB70053EE3E /* HW-23-AppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-23-AppleMusic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		094EBF7F29520CB70053EE3E /* HW_23_AppleMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_23_AppleMusicApp.swift; sourceTree = "<group>"; };
 		094EBF8129520CB70053EE3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09472CC7295382BC0047FB7C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				094EBF9529520F160053EE3E /* MainScreen */,
+				094EBFA6295212420053EE3E /* ListScreen */,
+				094EBF96295210160053EE3E /* RadioScreen */,
+				094EBF9F295211460053EE3E /* SearchScreen */,
+				09472CC5295381720047FB7C /* Strings.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		094EBF7329520CB70053EE3E = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +93,11 @@
 		094EBF7E29520CB70053EE3E /* HW-23-AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				09472CC7295382BC0047FB7C /* Sources */,
 				09B97FCB29525D4200931658 /* App */,
-				094EBFA6295212420053EE3E /* ListScreen */,
-				094EBF9F295211460053EE3E /* SearchScreen */,
-				094EBF96295210160053EE3E /* RadioScreen */,
-				094EBF9529520F160053EE3E /* MainScreen */,
-				094EBF8329520CBB0053EE3E /* Assets.xcassets */,
 				094EBF8529520CBB0053EE3E /* Preview Content */,
+				094EBF8129520CB70053EE3E /* ContentView.swift */,
+				094EBF8329520CBB0053EE3E /* Assets.xcassets */,
 			);
 			path = "HW-23-AppleMusic";
 			sourceTree = "<group>";
@@ -101,7 +113,6 @@
 		094EBF9529520F160053EE3E /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				094EBF8129520CB70053EE3E /* ContentView.swift */,
 				094EBF8D29520E510053EE3E /* LibraryView.swift */,
 				094EBF8F29520E860053EE3E /* MediatekaView.swift */,
 				094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */,
@@ -231,6 +242,7 @@
 				094EBFA12952115F0053EE3E /* SearchModel.swift in Sources */,
 				094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */,
 				094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */,
+				09472CC6295381720047FB7C /* Strings.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
 				094EBFA8295212510053EE3E /* ListModel.swift in Sources */,
 				094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */,

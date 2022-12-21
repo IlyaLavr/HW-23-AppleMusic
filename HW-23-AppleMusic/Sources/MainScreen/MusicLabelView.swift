@@ -10,10 +10,10 @@ import SwiftUI
 struct MusicLabelView: View {
     var body: some View {
         VStack {
-            Text("Ищете свою муыку?")
+            Text(Strings.MusicLabel.topText)
                 .bold()
                 .font(.system(size: 22))
-            Text("Здесь появится купленная вами в ITunes Store музфка")
+            Text(Strings.MusicLabel.bottomText)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.gray)
         }

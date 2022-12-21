@@ -10,20 +10,19 @@ import SwiftUI
 struct ListView: View {
     
     @State private var editMode: EditMode = .active
-
+    
     var body: some View {
         VStack {
-                List {
-                    ForEach(ListModel.listCategory, id:\.self) {
-                        ListCell(model: $0)
-                            .listRowSeparator(.visible)
-                    }
-                    .onMove(perform: move)
+            List {
+                ForEach(ListModel.listCategory, id:\.self) {
+                    ListCell(model: $0)
+                        .listRowSeparator(.visible)
                 }
-//                .environment(\.editMode, $editMode)
-                .listStyle(.grouped)
-                .padding(.leading, 0)
-                
+                .onMove(perform: move)
+            }
+            .listStyle(.grouped)
+            .padding(.leading, 0)
+            
             MusicPlayerView()
         }
     }
