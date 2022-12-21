@@ -21,14 +21,14 @@ struct MediatekaView: View {
                 } else {
                     ZStack {
                         ListView()
-//                            .environment(\.editMode, $editMode)
+                            .environment(\.editMode, $editMode)
                             .frame(alignment: .top)
                             .padding(.top, -280)
                     }
                     .background(Color.white)
                 }
             }
-            .navigationTitle("Медиатека")
+            .navigationTitle(Strings.NavigationTitles.mediatekaScreenTitles)
             .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
             .navigationBarItems(
                 trailing: HStack {
@@ -39,7 +39,6 @@ struct MediatekaView: View {
                 })
         }
     }
-    
 }
 
 struct MediatekaView_Previews: PreviewProvider {

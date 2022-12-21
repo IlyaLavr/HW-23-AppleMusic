@@ -20,7 +20,7 @@ struct RadioSmallSections: View {
         
         VStack(alignment: .leading, spacing: 15) {
             HStack {
-                Text("Шоу артистов")
+                Text(Strings.RadioSmallSections.firstSectionText)
                     .font(.title)
                     .bold()
                     .padding(.leading, 20)
@@ -45,7 +45,7 @@ struct RadioSmallSections: View {
                     }
                 }
             })
-            Text("Вы недавно слушали")
+            Text(Strings.RadioSmallSections.secondSectionText)
                 .font(.title)
                 .bold()
                 .padding(.leading, 15)
@@ -69,7 +69,7 @@ struct RadioSmallSections: View {
             })
             
             HStack {
-                Text("Популярные артисты")
+                Text(Strings.RadioSmallSections.thirdSectionText)
                     .font(.title)
                     .bold()
                     .padding(.leading, 15)
@@ -104,4 +104,3 @@ struct RadioSmallSections_Previews: PreviewProvider {
         RadioSmallSections()
     }
 }
-

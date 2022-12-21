@@ -15,12 +15,12 @@ struct RadioMainScreen: View {
                 Divider()
                     .padding([.leading,.trailing])
                 HStack {
-                RadioSmallSections()
+                    RadioSmallSections()
+                }
+                .navigationTitle(Strings.NavigationTitles.radioScreenTitles)
             }
-            .navigationTitle("Radio")
         }
     }
-}
 }
 struct RadioMainScreen_Previews: PreviewProvider {
     static var previews: some View {

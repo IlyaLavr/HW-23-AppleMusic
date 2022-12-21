@@ -18,12 +18,12 @@ struct ListCell: View {
                 Button(action: { toggle() },
                        label: {
                     if isShowed {
-                        Image(systemName: "checkmark.circle.fill")
+                        Image(systemName: Strings.ListCell.selectedImage)
                             .foregroundColor(.red)
                             .background(Color.white)
                             .cornerRadius(20)
                     } else {
-                        Image(systemName: "circle")
+                        Image(systemName: Strings.ListCell.image)
                         .foregroundColor(.gray)
                     }
                 })
