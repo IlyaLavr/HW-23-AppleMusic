@@ -23,7 +23,10 @@ struct LibraryView: View {
                 Image(systemName: Strings.Tabbar.tabBarItemMiddle)
                 Text(Strings.Tabbar.tabBarMiddleName)
             }
-            SearchMainScreen()
+            ZStack(alignment: .bottom) {
+                 SearchScreen()
+                 MusicPlayerView()
+            }
                 .tabItem {
                     Image(systemName: Strings.Tabbar.tabBarItemRigth)
                     Text(Strings.Tabbar.tabBarRigthName)

@@ -16,6 +16,7 @@ struct RadioMainScreen: View {
                     .padding([.leading,.trailing])
                 HStack {
                     RadioSmallSections()
+                        .padding(.bottom, 80)
                 }
                 .navigationTitle(Strings.NavigationTitles.radioScreenTitles)
             }

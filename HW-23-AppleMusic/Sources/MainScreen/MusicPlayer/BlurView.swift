@@ -14,6 +14,5 @@ struct BlurView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .systemChromeMaterialLight))
     }
 }
