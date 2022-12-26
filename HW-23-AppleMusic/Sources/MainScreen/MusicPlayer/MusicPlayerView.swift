@@ -11,10 +11,6 @@ struct MusicPlayerView: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(.gray)
-                .frame(height: 69, alignment: .bottom)
-                .opacity(1)
             HStack {
                 Image(systemName: Strings.MusicPlayer.currentImageTrack)
                     .resizable()
@@ -42,6 +38,8 @@ struct MusicPlayerView: View {
             }
             .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 25))
         }
+        .frame(height: 65)
+        .background(BlurView())
     }
     
 }
