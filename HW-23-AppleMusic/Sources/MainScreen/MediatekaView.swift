@@ -10,6 +10,8 @@ import SwiftUI
 struct MediatekaView: View {
     @State private var editMode: EditMode = .active
     @State var isPresented = false
+    @State var expand = false
+    @Namespace var animation
     
     var body: some View {
         NavigationView {
@@ -17,7 +19,7 @@ struct MediatekaView: View {
                 if !isPresented {
                     MusicLabelView()
                     Spacer()
-                    MusicPlayerView()
+//                    MusicPlayerView(animation: animation, expand: $expand)
                 } else {
                     ZStack {
                         ListView()

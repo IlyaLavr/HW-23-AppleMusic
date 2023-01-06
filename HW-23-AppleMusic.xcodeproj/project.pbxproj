@@ -105,10 +105,10 @@
 		094EBF7E29520CB70053EE3E /* HW-23-AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				094EBF8129520CB70053EE3E /* ContentView.swift */,
 				09472CC7295382BC0047FB7C /* Sources */,
 				09B97FCB29525D4200931658 /* App */,
 				094EBF8529520CBB0053EE3E /* Preview Content */,
-				094EBF8129520CB70053EE3E /* ContentView.swift */,
 				094EBF8329520CBB0053EE3E /* Assets.xcassets */,
 			);
 			path = "HW-23-AppleMusic";

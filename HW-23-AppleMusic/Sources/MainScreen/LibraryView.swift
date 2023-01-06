@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @State var expand = false
+    @Namespace var animation
+    
     var body: some View {
         TabView {
-            MediatekaView()
-                .tabItem {
+            ZStack(alignment: .bottom){
+                MediatekaView()
+                MusicPlayerView(animation: animation, expand: $expand)
+            }
+            .tabItem {
                     Image(systemName: Strings.Tabbar.tabBarItemLeft)
                     Text(Strings.Tabbar.tabBarLeftName)
                 }
             ZStack(alignment: .bottom) {
                 RadioMainScreen()
-                MusicPlayerView()
+                MusicPlayerView(animation: animation, expand: $expand)
             }
             .tabItem {
                 Image(systemName: Strings.Tabbar.tabBarItemMiddle)
@@ -25,7 +31,7 @@ struct LibraryView: View {
             }
             ZStack(alignment: .bottom) {
                  SearchScreen()
-                 MusicPlayerView()
+                 MusicPlayerView(animation: animation, expand: $expand)
             }
                 .tabItem {
                     Image(systemName: Strings.Tabbar.tabBarItemRigth)
