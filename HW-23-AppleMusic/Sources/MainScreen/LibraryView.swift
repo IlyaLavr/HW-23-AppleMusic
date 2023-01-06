@@ -30,7 +30,7 @@ struct LibraryView: View {
                 Text(Strings.Tabbar.tabBarMiddleName)
             }
             ZStack(alignment: .bottom) {
-                 SearchScreen()
+                 SearchMainScreen()
                  MusicPlayerView(animation: animation, expand: $expand)
             }
                 .tabItem {

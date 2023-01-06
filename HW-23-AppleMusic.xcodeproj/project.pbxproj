@@ -27,6 +27,8 @@
 		094EBFAA295212950053EE3E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA9295212950053EE3E /* ListCell.swift */; };
 		094EBFAC295212DC0053EE3E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFAB295212DC0053EE3E /* ListView.swift */; };
 		0976EDFD296866BA00B6CF90 /* BlurViewAllScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EDFC296866BA00B6CF90 /* BlurViewAllScreen.swift */; };
+		0976EDFF2968689C00B6CF90 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EDFE2968689C00B6CF90 /* DetailScreen.swift */; };
+		0976EE012968691400B6CF90 /* SearchMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE002968691400B6CF90 /* SearchMainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		094EBFA9295212950053EE3E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		094EBFAB295212DC0053EE3E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		0976EDFC296866BA00B6CF90 /* BlurViewAllScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewAllScreen.swift; sourceTree = "<group>"; };
+		0976EDFE2968689C00B6CF90 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		0976EE002968691400B6CF90 /* SearchMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				094EBFA02952115F0053EE3E /* SearchModel.swift */,
 				094EBFA22952118D0053EE3E /* SearchScreen.swift */,
+				0976EDFE2968689C00B6CF90 /* DetailScreen.swift */,
+				0976EE002968691400B6CF90 /* SearchMainScreen.swift */,
 			);
 			path = SearchScreen;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0976EE012968691400B6CF90 /* SearchMainScreen.swift in Sources */,
 				094EBFAC295212DC0053EE3E /* ListView.swift in Sources */,
 				094EBF9229520EBF0053EE3E /* MusicPlayerView.swift in Sources */,
 				094EBF9429520EEC0053EE3E /* MusicLabelView.swift in Sources */,
@@ -256,6 +263,7 @@
 				09472CC6295381720047FB7C /* Strings.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
 				094EBFA8295212510053EE3E /* ListModel.swift in Sources */,
+				0976EDFF2968689C00B6CF90 /* DetailScreen.swift in Sources */,
 				0976EDFD296866BA00B6CF90 /* BlurViewAllScreen.swift in Sources */,
 				094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */,
 				094EBFA32952118D0053EE3E /* SearchScreen.swift in Sources */,
