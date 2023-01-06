@@ -12,7 +12,6 @@ struct MusicPlayerView: View {
     @Binding var expand: Bool
     var height = UIScreen.main.bounds.height / 3
     var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
-    @State var volume: CGFloat = 0
     @State var offset: CGFloat = 0
     
     var body: some View {
@@ -27,14 +26,14 @@ struct MusicPlayerView: View {
                 
                 if expand{Spacer()}
                 
-                Image("3")
+                Image(Strings.MusicPlayerAllScreen.photoSinger)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: expand ? height : 55, height: expand ? height : 55)
                     .cornerRadius(15)
                 
                 if !expand {
-                    Text("Lady Gaga")
+                    Text(Strings.MusicPlayer.currentNameTrack)
                         .font(.title2)
                         .fontWeight(.bold)
                         .matchedGeometryEffect(id: "label", in: animation)
@@ -44,13 +43,13 @@ struct MusicPlayerView: View {
                 
                 if !expand {
                     Button(action: {}, label: {
-                        Image(systemName: "play.fill")
+                        Image(systemName: Strings.MusicPlayer.playButton)
                             .font(.title2)
                             .foregroundColor(.primary)
                     })
                     
                     Button(action: {}, label: {
-                        Image(systemName: "forward.fill")
+                        Image(systemName: Strings.MusicPlayer.nextTrackButton)
                             .font(.title2)
                             .foregroundColor(.primary)
                     })
@@ -64,108 +63,38 @@ struct MusicPlayerView: View {
                 HStack {
                     if expand  {
                         VStack(alignment: .leading) {
-                            Text("Meat Fish Eat")
+                            Text(Strings.MusicPlayerAllScreen.nameComposition)
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
                                 .font(.title3)
+//                                .matchedGeometryEffect(id: "label2", in: animation)
                             HStack(spacing: 100) {
-                                Text("Lady Gaga")
+                                Text(Strings.MusicPlayer.currentNameTrack)
                                     .font(.title2)
                                     .foregroundColor(.white)
-                                    .matchedGeometryEffect(id: "label", in: animation)
+//                                    .matchedGeometryEffect(id: "label", in: animation)
                                 Spacer(minLength: 0)
                                 
                                 Button(action: {}) {
-                                    Image(systemName: "ellipsis.circle.fill")
+                                    Image(systemName: Strings.MusicPlayerAllScreen.infoAboutTrack)
                                         .foregroundColor(.white)
                                 }
                             }
                         }
-                        
                     }
-                    
                 }
                 .padding()
                 .padding(.top, 20)
-                HStack {
-                    VStack {
-                        ZStack(alignment: .leading) {
-                           
-                            //Полоса воспроизведения
-                            Capsule()
-                                .fill(.white)
-                                .frame(height: 4)
-                            Circle()
-                                .fill(.white)
-                                .frame(width: 10, height: 10)
-                        }
-                        //Расстояние от краев
-                        .padding([.leading, .trailing], 20)
-                        HStack(spacing: 300) {
-                            Text("00:00")
-                                .font(.footnote)
-                                .foregroundColor(Color.white)
-                            Text("-03:48")
-                                .font(.footnote)
-                                .foregroundColor(Color.white)
-                        }
-                        
-                    }
-                    }
-                   
-                HStack(spacing: 40) {
-                    Button(action: {}, label: {
-                        Image(systemName: "backward.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    })
-                    .padding()
-                    
-                    Button(action: {}, label: {
-                        Image(systemName: "pause.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    })
-                    .padding()
-                    
-                    Button(action: {}, label: {
-                        Image(systemName: "forward.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    })
-                    .padding()
-                }
-               
                 
+                  PlayProgress()
+                  ButtonMediaAllScreen()
+
                 Spacer(minLength: 0)
                 
-                HStack(spacing: 15) {
-                    Image(systemName: "speaker.fill")
-                        .foregroundColor(.white)
-                    Slider(value: $volume)
-                        .accentColor(.white)
-                    Image(systemName: "speaker.wave.2.fill")
-                        .foregroundColor(.white)
-                }
+                VolumeControl()
                 .padding()
                 
-                HStack(spacing: 90) {
-                    Button(action: {}) {
-                        Image(systemName: "quote.bubble")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                    }
-                    Button(action: {}) {
-                        Image(systemName: "airplayaudio")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                    }
-                    Button(action: {}) {
-                        Image(systemName: "list.bullet")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                    }
-                }
+                BottomButtonMedia()
                 .padding(.bottom, safeArea?.bottom == 0 ? 60 : safeArea?.bottom)
             }
             .frame(height: expand ? nil : 0)
@@ -180,7 +109,6 @@ struct MusicPlayerView: View {
                 } else {
                     BlurViewAllScreen()
                 }
-                
             }
                 .onTapGesture(perform: {
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.9, blendDuration: 0.5)) {

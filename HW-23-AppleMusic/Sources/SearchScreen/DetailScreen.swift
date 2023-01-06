@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    var body: some View {            ScrollView {
+    var body: some View {
+        ScrollView {
         RadioBigSections()
                 HStack {
                     RadioSmallSections()
                 }
             }
+        .padding(.bottom, 90)
     }
 }
-
-//struct RadioMainScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailScreen()
-//    }
-//}

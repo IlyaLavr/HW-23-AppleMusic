@@ -24,7 +24,7 @@ struct SearchScreen: View {
         } else {
             return searchScreen.filter {
                 $0.name
-                .localizedCaseInsensitiveContains(searchText)
+                    .localizedCaseInsensitiveContains(searchText)
             }
         }
     }
@@ -38,8 +38,8 @@ struct SearchScreen: View {
                             .navigationTitle("\(model.name)")
                         ) {
                             Image(model.image)
-                            .frame(width: 180, height: 150)
-                            .cornerRadius(25)
+                                .frame(width: 180, height: 150)
+                                .cornerRadius(25)
                         }
                         
                         Text(model.name)
@@ -53,7 +53,6 @@ struct SearchScreen: View {
             .navigationTitle(Strings.NavigationTitles.searchScreenTitles)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
-//        .padding(.bottom, 80)
     }
 }
 
