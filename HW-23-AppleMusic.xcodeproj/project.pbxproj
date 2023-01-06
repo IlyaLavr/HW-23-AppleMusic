@@ -26,6 +26,7 @@
 		094EBFA8295212510053EE3E /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA7295212510053EE3E /* ListModel.swift */; };
 		094EBFAA295212950053EE3E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFA9295212950053EE3E /* ListCell.swift */; };
 		094EBFAC295212DC0053EE3E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EBFAB295212DC0053EE3E /* ListView.swift */; };
+		0976EDFD296866BA00B6CF90 /* BlurViewAllScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EDFC296866BA00B6CF90 /* BlurViewAllScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		094EBFA7295212510053EE3E /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		094EBFA9295212950053EE3E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		094EBFAB295212DC0053EE3E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		0976EDFC296866BA00B6CF90 /* BlurViewAllScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewAllScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				094EBF9129520EBF0053EE3E /* MusicPlayerView.swift */,
 				09402127295A2DE3007F3C12 /* BlurView.swift */,
+				0976EDFC296866BA00B6CF90 /* BlurViewAllScreen.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				09472CC6295381720047FB7C /* Strings.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
 				094EBFA8295212510053EE3E /* ListModel.swift in Sources */,
+				0976EDFD296866BA00B6CF90 /* BlurViewAllScreen.swift in Sources */,
 				094EBF8029520CB70053EE3E /* HW_23_AppleMusicApp.swift in Sources */,
 				094EBFA32952118D0053EE3E /* SearchScreen.swift in Sources */,
 			);
