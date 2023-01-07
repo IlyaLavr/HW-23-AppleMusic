@@ -31,25 +31,32 @@ struct SearchScreen: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
-            LazyVGrid(columns: columns) {
-                ForEach(searchResults, id: \.name) { model in
-                    ZStack(alignment: .bottomLeading) {
-                        NavigationLink (destination: DetailScreen()
-                            .navigationTitle("\(model.name)")
-                        ) {
-                            Image(model.image)
-                                .frame(width: 180, height: 150)
-                                .cornerRadius(25)
+            VStack(alignment: .leading) {
+                Text(Strings.Headers.headerSearch)
+                    .font(.title2)
+                    .bold()
+                    .padding(.leading, 20)
+                LazyVGrid(columns: columns) {
+                    ForEach(searchResults, id: \.name) { model in
+                        ZStack(alignment: .bottomLeading) {
+                            NavigationLink (destination: DetailScreen()
+                                .navigationTitle("\(model.name)")
+                            ) {
+                                Image(model.image)
+                                    .frame(width: 180, height: 150)
+                                    .cornerRadius(25)
+                            }
+                            
+                            Text(model.name)
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor(.white)
+                                .padding(EdgeInsets(top: 20, leading: 8, bottom: 15, trailing: 0))
                         }
-                        
-                        Text(model.name)
-                            .font(.title3)
-                            .bold()
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 20, leading: 8, bottom: 15, trailing: 0))
                     }
                 }
             }
+            
             .navigationTitle(Strings.NavigationTitles.searchScreenTitles)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }

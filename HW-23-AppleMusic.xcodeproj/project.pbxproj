@@ -38,6 +38,7 @@
 		0976EE102969B20500B6CF90 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0F2969B20500B6CF90 /* CollectionViewCell.swift */; };
 		0976EE132969B2AF00B6CF90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0976EE122969B2AF00B6CF90 /* SnapKit */; };
 		0976EE162969B4C800B6CF90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0976EE152969B4C800B6CF90 /* SnapKit */; };
+		09C82C9C296A0BD500F43D52 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C82C9B296A0BD500F43D52 /* CollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		0976EE0B2969ACC400B6CF90 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0976EE0D2969AD1600B6CF90 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		0976EE0F2969B20500B6CF90 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		09C82C9B296A0BD500F43D52 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				0976EE0B2969ACC400B6CF90 /* SearchViewController.swift */,
 				0976EE0D2969AD1600B6CF90 /* SearchView.swift */,
 				0976EE0F2969B20500B6CF90 /* CollectionViewCell.swift */,
+				09C82C9B296A0BD500F43D52 /* CollectionReusableView.swift */,
 			);
 			path = SearchScreenUiKit;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				0976EE0929686DC600B6CF90 /* PlayProgress.swift in Sources */,
 				09472CC6295381720047FB7C /* Strings.swift in Sources */,
 				0976EE102969B20500B6CF90 /* CollectionViewCell.swift in Sources */,
+				09C82C9C296A0BD500F43D52 /* CollectionReusableView.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
 				094EBFA8295212510053EE3E /* ListModel.swift in Sources */,
 				0976EDFF2968689C00B6CF90 /* DetailScreen.swift in Sources */,

@@ -62,4 +62,8 @@ enum Strings {
         static let leftIconVolume = "speaker.fill"
         static let rightIconVolume = "speaker.wave.2.fill"
     }
+    
+    enum Headers {
+        static let headerSearch = "Поиск по категориям"
+    }
 }

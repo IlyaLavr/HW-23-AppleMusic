@@ -29,6 +29,7 @@ class SearchViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.showsVerticalScrollIndicator = false
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionReusableView.identifier)
         return collectionView
     }()
 
@@ -79,21 +80,21 @@ class SearchViewController: UIViewController {
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
                 layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 5,
                                                                       leading: 5,
-                                                                      bottom: 40,
+                                                                      bottom: 75,
                                                                       trailing: 15)
                 layoutSection.orthogonalScrollingBehavior = .continuous
                 
                 
-//                let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.06),
-//                                                                     heightDimension: .estimated(40))
-//
-//                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-//                    layoutSize: layoutSectionHeaderSize,
-//                    elementKind: UICollectionView.elementKindSectionHeader,
-//                    alignment: .top)
-//                layoutSectionHeader.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0)
-//
-//                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.06),
+                                                                     heightDimension: .estimated(40))
+
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top)
+                layoutSectionHeader.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0)
+
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
                 return layoutSection
 
             default:
@@ -123,15 +124,6 @@ class SearchViewController: UIViewController {
                                                                       leading: 0,
                                                                       bottom: 20,
                                                                       trailing: 0)
-//                let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.06),
-//                                                                     heightDimension: .estimated(40))
-//
-//                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-//                    layoutSize: layoutSectionHeaderSize,
-//                    elementKind: UICollectionView.elementKindSectionHeader,
-//                    alignment: .top)
-//                layoutSectionHeader.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 10, trailing: 0)
-//                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
                 return layoutSection
             }
         }
@@ -151,31 +143,19 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let model = models[indexPath.item]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.image.image = UIImage(named: models[indexPath.item].image)
-        cell.nameItem.text = models[indexPath.item].name
-//        cell.configuration(model: model)
+        cell.configuration(model: model)
         return cell
     }
 
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionReusableView.cellHeaderIdentifier, for: indexPath) as? CollectionReusableView else {
-//            return UICollectionReusableView()
-//        }
-//        switch indexPath.section {
-//        case 0:
-//            header.configuration(headerLeftTitle: "Мои альбомы", headerRightTitle: "Все")
-//        case 1:
-//            header.configuration(headerLeftTitle: "Общие альбомы", headerRightTitle: "Все")
-//        case 2:
-//            header.configuration(headerLeftTitle: "Люди и места", headerRightTitle: nil)
-//        case 3:
-//            header.configuration(headerLeftTitle: "Типы медиафайлов", headerRightTitle: nil)
-//        default:
-//            header.configuration(headerLeftTitle: "Title", headerRightTitle: "title")
-//        }
-//        return header
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionReusableView.identifier, for: indexPath) as? CollectionReusableView else {
+            return UICollectionReusableView()
+        }
+        header.header.text = Strings.Headers.headerSearch
+        return header
+    }
 }
