@@ -16,6 +16,7 @@ enum Strings {
         static let tabBarLeftName = "Медиатека"
         static let tabBarMiddleName = "Радио"
         static let tabBarRigthName = "Поиск"
+        static let tabBarUiKitSearch = "Поиск UiKit"
     }
     
     enum MusicLabel {

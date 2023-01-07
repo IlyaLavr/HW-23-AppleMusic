@@ -37,6 +37,14 @@ struct LibraryView: View {
                 Image(systemName: Strings.Tabbar.tabBarItemRigth)
                 Text(Strings.Tabbar.tabBarRigthName)
             }
+            ZStack(alignment: .bottom) {
+                UIKitSearchView()
+                MusicPlayerView(animation: animation, expand: $expand)
+            }
+            .tabItem {
+                Image(systemName: Strings.Tabbar.tabBarItemLeft)
+                Text(Strings.Tabbar.tabBarUiKitSearch)
+            }
         }
         .accentColor(.red)
     }
