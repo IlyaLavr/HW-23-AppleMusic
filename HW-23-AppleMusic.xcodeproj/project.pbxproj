@@ -33,6 +33,12 @@
 		0976EE0529686CB600B6CF90 /* VolumeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0429686CB600B6CF90 /* VolumeControl.swift */; };
 		0976EE0729686D5900B6CF90 /* BottomButtonMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0629686D5900B6CF90 /* BottomButtonMedia.swift */; };
 		0976EE0929686DC600B6CF90 /* PlayProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0829686DC600B6CF90 /* PlayProgress.swift */; };
+		0976EE0C2969ACC400B6CF90 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0B2969ACC400B6CF90 /* SearchViewController.swift */; };
+		0976EE0E2969AD1600B6CF90 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0D2969AD1600B6CF90 /* SearchView.swift */; };
+		0976EE102969B20500B6CF90 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EE0F2969B20500B6CF90 /* CollectionViewCell.swift */; };
+		0976EE132969B2AF00B6CF90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0976EE122969B2AF00B6CF90 /* SnapKit */; };
+		0976EE162969B4C800B6CF90 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0976EE152969B4C800B6CF90 /* SnapKit */; };
+		09C82C9C296A0BD500F43D52 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C82C9B296A0BD500F43D52 /* CollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,10 @@
 		0976EE0429686CB600B6CF90 /* VolumeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeControl.swift; sourceTree = "<group>"; };
 		0976EE0629686D5900B6CF90 /* BottomButtonMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonMedia.swift; sourceTree = "<group>"; };
 		0976EE0829686DC600B6CF90 /* PlayProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayProgress.swift; sourceTree = "<group>"; };
+		0976EE0B2969ACC400B6CF90 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0976EE0D2969AD1600B6CF90 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0976EE0F2969B20500B6CF90 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		09C82C9B296A0BD500F43D52 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0976EE132969B2AF00B6CF90 /* SnapKit in Frameworks */,
+				0976EE162969B4C800B6CF90 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				094EBF9529520F160053EE3E /* MainScreen */,
-				094EBFA6295212420053EE3E /* ListScreen */,
+				09402126295A2DBF007F3C12 /* MusicPlayer */,
 				094EBF96295210160053EE3E /* RadioScreen */,
 				094EBF9F295211460053EE3E /* SearchScreen */,
+				094EBFA6295212420053EE3E /* ListScreen */,
+				0976EE0A2969AC0000B6CF90 /* SearchScreenUiKit */,
 				09472CC5295381720047FB7C /* Strings.swift */,
 			);
 			path = Sources;
@@ -141,7 +155,6 @@
 		094EBF9529520F160053EE3E /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				09402126295A2DBF007F3C12 /* MusicPlayer */,
 				094EBF8D29520E510053EE3E /* LibraryView.swift */,
 				094EBF8F29520E860053EE3E /* MediatekaView.swift */,
 				094EBF9329520EEC0053EE3E /* MusicLabelView.swift */,
@@ -181,6 +194,17 @@
 			path = ListScreen;
 			sourceTree = "<group>";
 		};
+		0976EE0A2969AC0000B6CF90 /* SearchScreenUiKit */ = {
+			isa = PBXGroup;
+			children = (
+				0976EE0B2969ACC400B6CF90 /* SearchViewController.swift */,
+				0976EE0D2969AD1600B6CF90 /* SearchView.swift */,
+				0976EE0F2969B20500B6CF90 /* CollectionViewCell.swift */,
+				09C82C9B296A0BD500F43D52 /* CollectionReusableView.swift */,
+			);
+			path = SearchScreenUiKit;
+			sourceTree = "<group>";
+		};
 		09B97FCB29525D4200931658 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +229,10 @@
 			dependencies = (
 			);
 			name = "HW-23-AppleMusic";
+			packageProductDependencies = (
+				0976EE122969B2AF00B6CF90 /* SnapKit */,
+				0976EE152969B4C800B6CF90 /* SnapKit */,
+			);
 			productName = "HW-23-AppleMusic";
 			productReference = 094EBF7C29520CB70053EE3E /* HW-23-AppleMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +261,10 @@
 				Base,
 			);
 			mainGroup = 094EBF7329520CB70053EE3E;
+			packageReferences = (
+				0976EE112969B2AF00B6CF90 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0976EE142969B4C800B6CF90 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 094EBF7D29520CB70053EE3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +299,7 @@
 				094EBFAA295212950053EE3E /* ListCell.swift in Sources */,
 				0976EE0329686C4400B6CF90 /* ButtonMediaAllScreen.swift in Sources */,
 				09402128295A2DE3007F3C12 /* BlurView.swift in Sources */,
+				0976EE0E2969AD1600B6CF90 /* SearchView.swift in Sources */,
 				0976EE0729686D5900B6CF90 /* BottomButtonMedia.swift in Sources */,
 				094EBF9A295210520053EE3E /* RadioBigSections.swift in Sources */,
 				094EBF8229520CB70053EE3E /* ContentView.swift in Sources */,
@@ -274,9 +307,12 @@
 				0976EE0529686CB600B6CF90 /* VolumeControl.swift in Sources */,
 				094EBFA12952115F0053EE3E /* SearchModel.swift in Sources */,
 				094EBF8E29520E510053EE3E /* LibraryView.swift in Sources */,
+				0976EE0C2969ACC400B6CF90 /* SearchViewController.swift in Sources */,
 				094EBF9029520E860053EE3E /* MediatekaView.swift in Sources */,
 				0976EE0929686DC600B6CF90 /* PlayProgress.swift in Sources */,
 				09472CC6295381720047FB7C /* Strings.swift in Sources */,
+				0976EE102969B20500B6CF90 /* CollectionViewCell.swift in Sources */,
+				09C82C9C296A0BD500F43D52 /* CollectionReusableView.swift in Sources */,
 				094EBF9C295210A00053EE3E /* RadioSmallSections.swift in Sources */,
 				094EBFA8295212510053EE3E /* ListModel.swift in Sources */,
 				0976EDFF2968689C00B6CF90 /* DetailScreen.swift in Sources */,
@@ -483,6 +519,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0976EE112969B2AF00B6CF90 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		0976EE142969B4C800B6CF90 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0976EE122969B2AF00B6CF90 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0976EE112969B2AF00B6CF90 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0976EE152969B4C800B6CF90 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0976EE112969B2AF00B6CF90 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 094EBF7429520CB70053EE3E /* Project object */;
 }

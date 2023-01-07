@@ -16,6 +16,7 @@ enum Strings {
         static let tabBarLeftName = "Медиатека"
         static let tabBarMiddleName = "Радио"
         static let tabBarRigthName = "Поиск"
+        static let tabBarUiKitSearch = "Поиск UiKit"
     }
     
     enum MusicLabel {
@@ -60,5 +61,13 @@ enum Strings {
         
         static let leftIconVolume = "speaker.fill"
         static let rightIconVolume = "speaker.wave.2.fill"
+    }
+    
+    enum Headers {
+        static let headerSearch = "Поиск по категориям"
+    }
+    
+    enum Placeholders {
+        static let searchBar = "Артисты, песни, тексты и др."
     }
 }
