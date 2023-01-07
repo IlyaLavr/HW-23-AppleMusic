@@ -66,4 +66,8 @@ enum Strings {
     enum Headers {
         static let headerSearch = "Поиск по категориям"
     }
+    
+    enum Placeholders {
+        static let searchBar = "Артисты, песни, тексты и др."
+    }
 }

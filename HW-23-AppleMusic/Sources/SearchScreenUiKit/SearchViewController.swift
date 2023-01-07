@@ -12,13 +12,15 @@ import SnapKit
 class SearchViewController: UIViewController {
     
     var models = SearchScreenModel.searchModels
+    var filterData: [SearchScreenModel] = []
+    var search = Bool()
     
     // MARK: - Elements
     
     private lazy var searchBar: UISearchController = {
         let search = UISearchController()
-        search.searchBar.placeholder = "Search"
-        //            search.searchBar.delegate = self
+        search.searchBar.placeholder = Strings.Placeholders.searchBar
+        search.searchBar.delegate = self
         return search
     }()
     
@@ -37,10 +39,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Поиск"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.searchController = searchBar
-        navigationItem.hidesSearchBarWhenScrolling = false
+        setupNavigationBar()
         setupHierarhy()
         setupLayout()
     }
@@ -128,27 +127,41 @@ class SearchViewController: UIViewController {
             }
         }
     }
+    
+    func setupNavigationBar() {
+        title = Strings.NavigationTitles.searchScreenTitles
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = searchBar
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        //        models.count
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        models.count
-        //        return 2
+        if !search {
+            return models.count
+        } else {
+            return filterData.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let model = models[indexPath.item]
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {
-            return UICollectionViewCell()
+        if !search {
+            let model = models[indexPath.item]
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configuration(model: model)
+            return cell
+        } else {
+            let model = filterData[indexPath.item]
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configuration(model: model)
+            return cell
         }
-        cell.configuration(model: model)
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -157,5 +170,20 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         header.header.text = Strings.Headers.headerSearch
         return header
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            search = false
+            collectionView.reloadData()
+        } else {
+            filterData = models.filter({ models -> Bool in
+                models.name.contains(searchText)
+            })
+            search = true
+            collectionView.reloadData()
+        }
     }
 }
