@@ -25,7 +25,7 @@ enum Strings {
     
     enum MusicPlayer{
         static let currentImageTrack = "play.square.fill"
-        static let currentNameTrack = "Не исполняется"
+        static let currentNameTrack = "Céline Dion"
         static let playButton = "play.fill"
         static let nextTrackButton = "forward.fill"
     }
@@ -45,5 +45,20 @@ enum Strings {
         static let radioScreenTitles = "Radio"
         static let searchScreenTitles = "Поиск"
         static let mediatekaScreenTitles = "Медиатека"
+    }
+    
+    enum MusicPlayerAllScreen {
+        static let photoSinger = "20"
+        static let nameComposition = "My Heart Will Go On"
+        static let infoAboutTrack = "ellipsis.circle.fill"
+        
+        static let passedTime = "00:00"
+        static let remainingTime = "-03:48"
+        
+        static let backTrack = "backward.fill"
+        static let nextTrack = "forward.fill"
+        
+        static let leftIconVolume = "speaker.fill"
+        static let rightIconVolume = "speaker.wave.2.fill"
     }
 }

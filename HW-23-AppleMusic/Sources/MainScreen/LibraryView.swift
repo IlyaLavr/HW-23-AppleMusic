@@ -8,29 +8,35 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @State var expand = false
+    @Namespace var animation
+    
     var body: some View {
         TabView {
-            MediatekaView()
-                .tabItem {
-                    Image(systemName: Strings.Tabbar.tabBarItemLeft)
-                    Text(Strings.Tabbar.tabBarLeftName)
-                }
+            ZStack(alignment: .bottom){
+                MediatekaView()
+                MusicPlayerView(animation: animation, expand: $expand)
+            }
+            .tabItem {
+                Image(systemName: Strings.Tabbar.tabBarItemLeft)
+                Text(Strings.Tabbar.tabBarLeftName)
+            }
             ZStack(alignment: .bottom) {
                 RadioMainScreen()
-                MusicPlayerView()
+                MusicPlayerView(animation: animation, expand: $expand)
             }
             .tabItem {
                 Image(systemName: Strings.Tabbar.tabBarItemMiddle)
                 Text(Strings.Tabbar.tabBarMiddleName)
             }
             ZStack(alignment: .bottom) {
-                 SearchScreen()
-                 MusicPlayerView()
+                SearchMainScreen()
+                MusicPlayerView(animation: animation, expand: $expand)
             }
-                .tabItem {
-                    Image(systemName: Strings.Tabbar.tabBarItemRigth)
-                    Text(Strings.Tabbar.tabBarRigthName)
-                }
+            .tabItem {
+                Image(systemName: Strings.Tabbar.tabBarItemRigth)
+                Text(Strings.Tabbar.tabBarRigthName)
+            }
         }
         .accentColor(.red)
     }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ListView: View {
-    
+    @State var expand = false
+    @Namespace var animation
     @State private var editMode: EditMode = .active
     
     var body: some View {
@@ -23,7 +24,7 @@ struct ListView: View {
             .listStyle(.grouped)
             .padding(.leading, 0)
             
-            MusicPlayerView()
+            MusicPlayerView(animation: animation, expand: $expand)
         }
     }
     

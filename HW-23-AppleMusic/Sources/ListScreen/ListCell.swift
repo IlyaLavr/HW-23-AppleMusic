@@ -38,10 +38,3 @@ struct ListCell: View {
         isShowed.toggle()
     }
 }
-
-struct ListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ListCell(model: ListModel.listCategory.first ?? ListModel(icon: "none", name: "none"))
-    }
-}
-
