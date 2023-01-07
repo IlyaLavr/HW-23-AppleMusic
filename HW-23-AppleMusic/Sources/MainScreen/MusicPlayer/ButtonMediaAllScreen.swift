@@ -18,7 +18,7 @@ struct ButtonMediaAllScreen: View {
             .padding()
             
             Button(action: {}, label: {
-                Image(systemName: Strings.MusicPlayerAllScreen.pause)
+                Image(systemName: Strings.MusicPlayer.playButton)
                     .font(.largeTitle)
                     .foregroundColor(.white)
             })
@@ -31,11 +31,5 @@ struct ButtonMediaAllScreen: View {
             })
             .padding()
         }
-    }
-}
-
-struct ButtonMediaAllScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ButtonMediaAllScreen()
     }
 }

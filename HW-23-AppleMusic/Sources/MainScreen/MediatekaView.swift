@@ -19,7 +19,6 @@ struct MediatekaView: View {
                 if !isPresented {
                     MusicLabelView()
                     Spacer()
-//                    MusicPlayerView(animation: animation, expand: $expand)
                 } else {
                     ZStack {
                         ListView()

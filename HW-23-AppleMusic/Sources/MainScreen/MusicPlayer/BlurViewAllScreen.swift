@@ -14,6 +14,6 @@ struct BlurViewAllScreen: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .systemChromeMaterialDark))
+        _ = UIVisualEffectView(effect: UIBlurEffect(style: .systemChromeMaterialDark))
     }
 }

@@ -48,7 +48,7 @@ enum Strings {
     }
     
     enum MusicPlayerAllScreen {
-        static let photoSinger = "2"
+        static let photoSinger = "20"
         static let nameComposition = "My Heart Will Go On"
         static let infoAboutTrack = "ellipsis.circle.fill"
         
@@ -56,7 +56,6 @@ enum Strings {
         static let remainingTime = "-03:48"
         
         static let backTrack = "backward.fill"
-        static let pause = "pause.fill"
         static let nextTrack = "forward.fill"
         
         static let leftIconVolume = "speaker.fill"

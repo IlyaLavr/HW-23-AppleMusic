@@ -12,7 +12,6 @@ struct PlayProgress: View {
         HStack {
             VStack {
                 ZStack(alignment: .leading) {
-                    //Полоса воспроизведения
                     Capsule()
                         .fill(.white)
                         .frame(height: 4)
@@ -20,7 +19,6 @@ struct PlayProgress: View {
                         .fill(.white)
                         .frame(width: 10, height: 10)
                 }
-                //Расстояние от краев
                 .padding([.leading, .trailing], 20)
                 HStack(spacing: 300) {
                     Text(Strings.MusicPlayerAllScreen.passedTime)
@@ -30,7 +28,6 @@ struct PlayProgress: View {
                         .font(.footnote)
                         .foregroundColor(Color.white)
                 }
-                
             }
         }
     }

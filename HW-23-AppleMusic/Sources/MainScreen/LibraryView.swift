@@ -18,9 +18,9 @@ struct LibraryView: View {
                 MusicPlayerView(animation: animation, expand: $expand)
             }
             .tabItem {
-                    Image(systemName: Strings.Tabbar.tabBarItemLeft)
-                    Text(Strings.Tabbar.tabBarLeftName)
-                }
+                Image(systemName: Strings.Tabbar.tabBarItemLeft)
+                Text(Strings.Tabbar.tabBarLeftName)
+            }
             ZStack(alignment: .bottom) {
                 RadioMainScreen()
                 MusicPlayerView(animation: animation, expand: $expand)
@@ -30,13 +30,13 @@ struct LibraryView: View {
                 Text(Strings.Tabbar.tabBarMiddleName)
             }
             ZStack(alignment: .bottom) {
-                 SearchMainScreen()
-                 MusicPlayerView(animation: animation, expand: $expand)
+                SearchMainScreen()
+                MusicPlayerView(animation: animation, expand: $expand)
             }
-                .tabItem {
-                    Image(systemName: Strings.Tabbar.tabBarItemRigth)
-                    Text(Strings.Tabbar.tabBarRigthName)
-                }
+            .tabItem {
+                Image(systemName: Strings.Tabbar.tabBarItemRigth)
+                Text(Strings.Tabbar.tabBarRigthName)
+            }
         }
         .accentColor(.red)
     }

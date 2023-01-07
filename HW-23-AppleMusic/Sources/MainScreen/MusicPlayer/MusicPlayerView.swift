@@ -54,7 +54,6 @@ struct MusicPlayerView: View {
                             .foregroundColor(.primary)
                     })
                 }
-                
             }
             .padding(.horizontal)
             
@@ -67,12 +66,10 @@ struct MusicPlayerView: View {
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
                                 .font(.title3)
-//                                .matchedGeometryEffect(id: "label2", in: animation)
                             HStack(spacing: 100) {
                                 Text(Strings.MusicPlayer.currentNameTrack)
                                     .font(.title2)
                                     .foregroundColor(.white)
-//                                    .matchedGeometryEffect(id: "label", in: animation)
                                 Spacer(minLength: 0)
                                 
                                 Button(action: {}) {
@@ -86,16 +83,16 @@ struct MusicPlayerView: View {
                 .padding()
                 .padding(.top, 20)
                 
-                  PlayProgress()
-                  ButtonMediaAllScreen()
-
+                PlayProgress()
+                ButtonMediaAllScreen()
+                
                 Spacer(minLength: 0)
                 
                 VolumeControl()
-                .padding()
+                    .padding()
                 
                 BottomButtonMedia()
-                .padding(.bottom, safeArea?.bottom == 0 ? 60 : safeArea?.bottom)
+                    .padding(.bottom, safeArea?.bottom == 0 ? 60 : safeArea?.bottom)
             }
             .frame(height: expand ? nil : 0)
             .opacity(expand ? 1 : 0)
@@ -122,7 +119,7 @@ struct MusicPlayerView: View {
         .gesture(DragGesture().onEnded(ended(value:)).onChanged(changed(value:)))
         .ignoresSafeArea()
     }
-        
+    
     func changed(value: DragGesture.Value) {
         if value.translation.height > 0 && expand {
             offset = value.translation.height
@@ -138,12 +135,3 @@ struct MusicPlayerView: View {
         }
     }
 }
-
-
-//struct PlayerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MusicPlayerView()
-//    }
-//}
-
-

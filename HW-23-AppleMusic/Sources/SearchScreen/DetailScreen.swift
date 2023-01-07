@@ -10,11 +10,11 @@ import SwiftUI
 struct DetailScreen: View {
     var body: some View {
         ScrollView {
-        RadioBigSections()
-                HStack {
-                    RadioSmallSections()
-                }
+            RadioBigSections()
+            HStack {
+                RadioSmallSections()
             }
+        }
         .padding(.bottom, 90)
     }
 }
