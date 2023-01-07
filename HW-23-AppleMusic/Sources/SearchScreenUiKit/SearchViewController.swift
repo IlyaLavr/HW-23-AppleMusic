@@ -12,16 +12,16 @@ import SnapKit
 class SearchViewController: UIViewController {
     
     var models = SearchScreenModel.searchModels
-
+    
     // MARK: - Elements
-
+    
     private lazy var searchBar: UISearchController = {
-            let search = UISearchController()
-            search.searchBar.placeholder = "Search"
-//            search.searchBar.delegate = self
-            return search
-        }()
-
+        let search = UISearchController()
+        search.searchBar.placeholder = "Search"
+        //            search.searchBar.delegate = self
+        return search
+    }()
+    
     private lazy var collectionView: UICollectionView = {
         let layout = createLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -32,31 +32,31 @@ class SearchViewController: UIViewController {
         collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionReusableView.identifier)
         return collectionView
     }()
-
-        // MARK: - Lyfecycle
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            title = "Поиск"
-            navigationController?.navigationBar.prefersLargeTitles = true
-            navigationItem.searchController = searchBar
-            navigationItem.hidesSearchBarWhenScrolling = false
-            setupHierarhy()
-            setupLayout()
-        }
-
+    
+    // MARK: - Lyfecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Поиск"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController = searchBar
+        navigationItem.hidesSearchBarWhenScrolling = false
+        setupHierarhy()
+        setupLayout()
+    }
+    
     // MARK: - Setup
-
+    
     private func setupHierarhy() {
         view.addSubview(collectionView)
     }
-
+    
     private func setupLayout() {
         collectionView.snp.makeConstraints { make in
             make.left.top.right.bottom.equalTo(view)
         }
     }
-
+    
     private func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, _ in
             switch sectionIndex {
@@ -87,28 +87,28 @@ class SearchViewController: UIViewController {
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.06),
                                                                      heightDimension: .estimated(40))
-
+                
                 let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: layoutSectionHeaderSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top)
                 layoutSectionHeader.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0)
-
+                
                 layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
                 return layoutSection
-
+                
             default:
                 let itemSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
                     heightDimension: .fractionalHeight(1)
                 )
-
+                
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0,
                                                                    leading: 5,
                                                                    bottom: 0,
                                                                    trailing: 5)
-
+                
                 let groupSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1.1),
                     heightDimension: .estimated(500)
@@ -117,7 +117,7 @@ class SearchViewController: UIViewController {
                     layoutSize: groupSize,
                     subitems: [layoutItem]
                 )
-
+                
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
                 layoutSection.orthogonalScrollingBehavior = .groupPagingCentered
                 layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0,
@@ -131,17 +131,17 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        models.count
+        //        models.count
         return 1
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         models.count
-//        return 2
+        //        return 2
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let model = models[indexPath.item]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else {
@@ -150,7 +150,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.configuration(model: model)
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionReusableView.identifier, for: indexPath) as? CollectionReusableView else {
             return UICollectionReusableView()

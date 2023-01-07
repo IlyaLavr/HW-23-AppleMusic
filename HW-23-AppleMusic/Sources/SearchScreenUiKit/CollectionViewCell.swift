@@ -10,7 +10,7 @@ import SnapKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "photoCell"
+    static let identifier = "cell"
     
     // MARK: - Oulets
     
